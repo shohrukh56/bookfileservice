@@ -1,4 +1,4 @@
-POST https://file-servisss.herokuapp.com/save
+POST https://bookfileservice.herokuapp.com/save
 Authorization: Bearer {{auth_token}}
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
@@ -11,7 +11,7 @@ Content-Type: text/plain
 
 ###
 
-GET https://file-servisss.herokuapp.com/media/216db9bf-bc4b-4889-9dbf-8f0db3e4beea
+GET https://bookfileservice.herokuapp.com/media/216db9bf-bc4b-4889-9dbf-8f0db3e4beea
 Authorization: Bearer {{auth_token}}
 
 ###
