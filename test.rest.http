@@ -1,0 +1,28 @@
+POST https://file-servisss.herokuapp.com/save
+Authorization: Bearer {{auth_token}}
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="par.jpg"
+Content-Type: text/plain
+
+< ./files/TheGreatGatsby2013Poster.jpg
+--WebAppBoundary--
+
+###
+
+GET https://file-servisss.herokuapp.com/media/216db9bf-bc4b-4889-9dbf-8f0db3e4beea
+Authorization: Bearer {{auth_token}}
+
+###
+POST https://auth-book.herokuapp.com/api/tokens
+Content-Type: application/json
+
+{
+  "username": "Ali",
+  "password": "pass"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+###
